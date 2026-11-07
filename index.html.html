@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AstraClub – Minecraft Network</title>
+<style>
+:root{--bg:#080b16;--panel:#11182b;--panel2:#17213a;--blue:#55c7ff;--purple:#9874ff;--text:#f4f7ff;--muted:#aab5ce;--line:#283653}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -20%,#243b70 0,transparent 48%),var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
+a{color:inherit;text-decoration:none}.wrap{width:min(1100px,92%);margin:auto}
+header{position:sticky;top:0;z-index:5;background:#080b16eF;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-size:23px;font-weight:900;letter-spacing:1px}.brand span{color:var(--blue)}.links{display:flex;gap:22px;color:var(--muted);font-size:14px}.links a:hover{color:var(--blue)}
+.hero{padding:100px 0 82px;text-align:center}.tag{display:inline-block;padding:8px 14px;border:1px solid #4b72a8;border-radius:30px;color:#a9ddff;background:#142542;font-size:12px;letter-spacing:2px;text-transform:uppercase}
+h1{font-size:clamp(46px,9vw,88px);margin:22px 0 12px;line-height:1;letter-spacing:-3px}.shine{background:linear-gradient(90deg,var(--blue),#b39aff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{max-width:650px;margin:0 auto;color:var(--muted);font-size:18px;line-height:1.6}.buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{border:0;border-radius:10px;padding:14px 20px;font-weight:800;cursor:pointer;background:linear-gradient(100deg,var(--blue),var(--purple));color:#07101d}.btn.secondary{background:var(--panel2);border:1px solid var(--line);color:var(--text)}
+.ipbox{display:inline-flex;align-items:center;gap:12px;margin-top:24px;padding:12px 16px;background:#0d1425;border:1px solid var(--line);border-radius:12px;color:#dceaff}.ipbox code{font-size:16px;color:var(--blue)}
+section{padding:64px 0}.section-title{text-align:center;font-size:34px;margin:0 0 10px}.section-desc{text-align:center;color:var(--muted);margin:0 auto 30px;max-width:600px;line-height:1.5}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:22px;border-radius:16px;background:linear-gradient(145deg,var(--panel),#0e1424);border:1px solid var(--line);min-height:140px}.icon{font-size:27px}.card h3{margin:12px 0 7px}.card p{margin:0;color:var(--muted);line-height:1.5;font-size:14px}
+.rank{border-top:3px solid var(--purple)}.rank.media{border-color:var(--blue)}.rank.owner{border-color:#ffca65}.rank ul{padding-left:18px;color:var(--muted);line-height:1.8;font-size:14px}
+.notice{max-width:760px;margin:auto;background:linear-gradient(120deg,#142541,#201b42);border:1px solid #394c78;border-radius:16px;padding:24px;text-align:center}.notice p{color:var(--muted);line-height:1.6}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:13px;text-align:center}
+@media(max-width:700px){.links{gap:10px;font-size:12px}.grid{grid-template-columns:1fr 1fr}.hero{padding:75px 0 60px}nav{height:64px}.brand{font-size:19px}}
+@media(max-width:440px){.grid{grid-template-columns:1fr}.links a:nth-child(3){display:none}.ipbox{flex-wrap:wrap;justify-content:center}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a class="brand" href="#">ASTRA<span>CLUB</span></a>
+<div class="links"><a href="#modi">Spielmodi</a><a href="#ranks">Ränge</a><a href="#cosmetics">Cosmetics</a><a href="#media">Media</a></div>
+</nav></div></header>
+<main>
+<div class="hero"><div class="wrap">
+<div class="tag">Minecraft Java &amp; Bedrock Network</div>
+<h1>PLAY YOUR <span class="shine">WAY.</span></h1>
+<p class="sub">Willkommen bei AstraClub – deinem Netzwerk für spannende PvP-Kämpfe, Minigames und ein gemeinsames Abenteuer.</p>
+<div class="buttons"><a class="btn" href="#modi">Spielmodi entdecken</a><a class="btn secondary" href="#media">Media-Rang</a></div>
+<div class="ipbox"><span>Server-IP</span><code id="ip">astraclub.exaroton.me</code><button class="btn" style="padding:8px 12px" onclick="copyIP()">Kopieren</button></div>
+<p id="copymsg" style="font-size:12px;color:var(--muted);margin-top:8px">Java & Bedrock: astraclub.exaroton.me · Port je nach Server-Konfiguration</p>
+</div></div>
+<section id="modi"><div class="wrap">
+<h2 class="section-title">Unsere Spielmodi</h2><p class="section-desc">Von schnellen Duellen bis zu großen Teamrunden – hier ist für jeden etwas dabei.</p>
+<div class="grid">
+<div class="card"><div class="icon">⚔️</div><h3>PvP &amp; Practice</h3><p>Sword, Crystal, Mace, NethPot und weitere PvP-Kits.</p></div>
+<div class="card"><div class="icon">🔥</div><h3>FFA</h3><p>Verschiedene Free-for-All-Arenen und PvP-Herausforderungen.</p></div>
+<div class="card"><div class="icon">🛏️</div><h3>BedWars</h3><p>Beschütze dein Bett und kämpfe mit deinem Team.</p></div>
+<div class="card"><div class="icon">☁️</div><h3>SkyWars</h3><p>Starte auf deiner Insel und stelle dich den anderen Spielern.</p></div>
+<div class="card"><div class="icon">🌍</div><h3>WorldSMP</h3><p>Eine Welt zum Bauen, Erkunden und gemeinsamen Spielen.</p></div>
+<div class="card"><div class="icon">🏆</div><h3>Events</h3><p>Besondere Runden, Wettbewerbe und Community-Events.</p></div>
+</div></div></section>
+<section id="ranks"><div class="wrap">
+<h2 class="section-title">AstraClub-Ränge</h2><p class="section-desc">Jeder Rang hat seinen eigenen Platz in der Community.</p>
+<div class="grid">
+<div class="card rank owner"><h3>👑 Owner</h3><p>Leitet das Netzwerk und trifft wichtige Entscheidungen.</p></div>
+<div class="card rank"><h3>🛡️ Admin</h3><p>Unterstützt die Leitung und kümmert sich um den Serverbetrieb.</p></div>
+<div class="card rank"><h3>🔨 Moderator</h3><p Hilft Spielern und achtet auf ein faires Miteinander.</p></div>
+<div class="card rank"><h3>⭐ Super</h3><p>Ein besonderer Community-Rang.</p></div>
+<div class="card rank media"><h3>🎥 Media</h3><p>Für Creator mit mindestens 10 YouTube-Abonnenten. Bewerbung erforderlich.</p></div>
+<div class="card rank"><h3>🎮 Spieler</h3><p>Der Rang für alle, die AstraClub besuchen.</p></div>
+</div></div></section>
+<section id="cosmetics"><div class="wrap">
+<h2 class="section-title">Cosmetics</h2><p class="section-desc">Zeig deinen eigenen Stil – mit kosmetischen Extras, die deinen Look besonders machen.</p>
+<div class="grid">
+<div class="card"><div class="icon">✨</div><h3>Partikel</h3><p>Coole Effekte, die dich begleiten.</p></div>
+<div class="card"><div class="icon">🎭</div><h3>Hüte &amp; Gadgets</h3><p>Optische Extras für Lobby und Community.</p></div>
+<div class="card"><div class="icon">💥</div><h3>Kill-Effekte</h3><p>Besondere visuelle Effekte nach einem Sieg.</p></div>
+</div></div></section>
+<section id="media"><div class="wrap"><div class="notice">
+<h2>Du bist YouTuber?</h2><p>Du hast mindestens <strong>10 Abonnenten</strong>? Dann kannst du dich für den <strong>Media-Rang</strong> bewerben. Die genauen Voraussetzungen und der Bewerbungsweg werden hier ergänzt.</p>
+<a class="btn" href="mailto:media@astraclub.example?subject=AstraClub%20Media-Bewerbung">Media-Team kontaktieren</a>
+</div></div></section>
+</main>
+<footer><div class="wrap">© <span id="year"></span> AstraClub · Eine Community für Java &amp; Bedrock<br><span>Diese Website ist ein Startentwurf. Server-IP, echte Statusanzeige und Bewerbungslink müssen noch eingerichtet werden.</span></div></footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+function copyIP(){const ip=document.getElementById('ip').textContent;navigator.clipboard?.writeText(ip).then(()=>document.getElementById('copymsg').textContent='IP kopiert!').catch(()=>document.getElementById('copymsg').textContent='Bitte IP markieren und kopieren.');}
+</script>
+</body></html>
